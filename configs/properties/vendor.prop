@@ -316,6 +316,7 @@ persist.radio.multisim.config=dsds
 persist.vendor.data.iwlan.enable=true
 ro.vendor.radio.build_region=global
 ro.com.android.dataroaming=true
+ro.telephony.default_network=33,33
 persist.vendor.radio.enableadvancedscan=true
 
 # RCS

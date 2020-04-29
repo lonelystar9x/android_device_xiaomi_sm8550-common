@@ -41,7 +41,6 @@ persist.vendor.vonr_setting_support=1
 # RIL
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ril.subscription.types=NV,RUIM
-ro.telephony.default_network=33,33
 
 # RKPD
 remote_provisioning.enable_rkpd=true
