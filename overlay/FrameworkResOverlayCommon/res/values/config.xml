@@ -334,8 +334,11 @@
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
     </string-array>
 
-     <!-- PowerOffAlarmService -->
+    <!-- PowerOffAlarmService -->
     <bool name="config_powerOffAlarmEnabled">true</bool>
+
+    <!-- SystemInfo Sys Nodes -->
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
 
     <!-- Whether to force enable multi resolution configuration for camera -->
     <bool name="config_forceMultiResolution">true</bool>
