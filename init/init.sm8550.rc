@@ -52,4 +52,4 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/walt/input_boost/input_boost_ms 0
 
 on property:ro.boot.hwversion=*
-    setprop ro.boot.hardware.revision ${ro.boot.hwversion}
+    setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
