@@ -62,6 +62,7 @@
 /sys/{class,devices/virtual}/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
 # Touchscreen
+/dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /sys/devices/platform/goodix_ts.0(/.*)? u:object_r:sysfs_goodix_touch:s0
 
 # ZRAM
