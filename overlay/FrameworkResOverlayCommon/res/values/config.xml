@@ -302,4 +302,7 @@
 
     <!-- SystemInfo Sys Nodes -->
     <integer name="config_sysCPUTempMultiplier">1000</integer>
+
+    <!-- PowerOffAlarmService -->
+    <bool name="config_powerOffAlarmEnabled">true</bool>
 </resources>
