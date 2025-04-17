@@ -97,10 +97,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-manager-lib
 
-#XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -268,6 +264,12 @@ PRODUCT_PACKAGES += \
     SettingsOverlayCommon \
     TelephonyOverlayCommon \
     WifiOverlayCommon
+
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
 # Partitions
 PRODUCT_PACKAGES += \
