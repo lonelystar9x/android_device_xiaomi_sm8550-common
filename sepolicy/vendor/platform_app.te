@@ -21,5 +21,9 @@ hal_client_domain(platform_app, vendor_hal_camerapostproc_xiaomi)
 hal_client_domain(platform_app, hal_quickcamera)
 dontaudit hal_camera_default shell_data_file:dir search;
 
+# Dolby
+allow platform_app hal_dms_hwservice:hwservice_manager find;
+binder_call(platform_app, hal_dms_default)
+
 allow platform_app vendor_hal_soter_hwservice:hwservice_manager find;
 binder_call(platform_app, vendor_hal_soter_qti)
