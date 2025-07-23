@@ -95,6 +95,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     (
+        'vendor/lib64/libqms_xiaomi.so',
+    ): blob_fixup()
+        .add_needed('libbinder_shim.so'),
+    (
         'vendor/etc/media_codecs_kalama.xml',
         'vendor/etc/media_codecs_kalama_vendor.xml',
     ): blob_fixup()
