@@ -81,6 +81,11 @@ blob_fixups: blob_fixups_user_type = {
             'libstagefright_foundation.so',
             'libstagefright_foundation-v33.so',
         ),
+    (
+        'vendor/bin/hw/vendor.dolby.media.c2@1.0-service', 
+        'vendor/bin/hw/dolbycodec2',
+    ): blob_fixup()
+        .add_needed('libshim_dolby.so'),
     'vendor/lib64/c2.dolby.client.so' : blob_fixup()
         .add_needed('libcodec2_hidl_shim.so'),
     'vendor/lib64/libqcodec2_core.so' : blob_fixup()
