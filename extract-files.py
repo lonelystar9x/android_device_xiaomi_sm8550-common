@@ -86,6 +86,11 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libbinder_shim.so'),
     (
+        'vendor/bin/hw/vendor.dolby.media.c2@1.0-service', 
+        'vendor/bin/hw/dolbycodec2',
+    ): blob_fixup()
+        .add_needed('libshim_dolby.so'),
+    (
         'vendor/etc/media_codecs_kalama.xml',
         'vendor/etc/media_codecs_kalama_vendor.xml',
     ): blob_fixup()
