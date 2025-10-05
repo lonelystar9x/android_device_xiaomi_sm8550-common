@@ -25,6 +25,9 @@ allow system_app sysfs_thermal:file write;
 allow system_app sysfs_thermal:file rw_file_perms;
 r_dir_file(system_app, rootfs)
 
+# Gestures
+allow system_app vendor_sysfs_sensors:file rw_file_perms;
+
 # High Brightness Mode
 allow system_app vendor_sysfs_graphics:dir search;
 allow system_app vendor_sysfs_graphics:file rw_file_perms;

@@ -51,28 +51,46 @@ public final class FileUtils {
         return 0;
     }
 
-    public static void writeLine(String fileName, String value) {
-        BufferedWriter writerValue = null;
+    /**
+     * Writes the given value into the given file
+     *
+     * @return true on success, false on failure
+     */
+    public static boolean writeLine(String fileName, String value) {
+        BufferedWriter writer = null;
+
         try {
-            writerValue = new BufferedWriter(new FileWriter(fileName));
-            writerValue.write(value);
+            writer = new BufferedWriter(new FileWriter(fileName));
+            writer.write(value);
+            writer.flush();
         } catch (FileNotFoundException e) {
             Log.w(TAG, "No such file " + fileName + " for writing", e);
+            return false;
         } catch (IOException e) {
             Log.e(TAG, "Could not write to file " + fileName, e);
+            return false;
         } finally {
             try {
-                if (writerValue != null) {
-                    writerValue.close();
+                if (writer != null) {
+                    writer.close();
                 }
             } catch (IOException e) {
-                // Ignored
+                // Ignored, not much we can do anyway
             }
         }
+
+        return true;
     }
 
-    public static void writeLine(String fileName, int value) {
-        writeLine(fileName, Integer.toString(value));
+    /**
+     * Writes the given integer value into the given file
+     *
+     * @return true on success, false on failure
+     */
+    public static boolean writeLine(String fileName, int value) {
+        // Simply convert the int to a String and call the existing method.
+        // This avoids duplicating the file writing logic.
+        return writeLine(fileName, String.valueOf(value));
     }
 
     public static boolean fileExists(String fileName) {

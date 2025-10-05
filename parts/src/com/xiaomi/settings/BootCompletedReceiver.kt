@@ -11,6 +11,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.hardware.display.DisplayManager
 import android.os.Handler
+import android.os.UserHandle
 import android.os.Looper
 import android.util.Log
 import android.view.Display
@@ -22,6 +23,7 @@ import com.xiaomi.settings.autohbm.AutoHbmActivity
 import com.xiaomi.settings.autohbm.AutoHbmFragment
 import com.xiaomi.settings.autohbm.AutoHbmTileService
 import com.xiaomi.settings.telephony.EsimController
+import com.xiaomi.settings.touch.TouchOrientationService
 import com.xiaomi.settings.utils.ComponentUtils
 
 class BootCompletedReceiver : BroadcastReceiver() {
@@ -55,6 +57,9 @@ class BootCompletedReceiver : BroadcastReceiver() {
     }
 
     private fun onLockedBootCompleted(context: Context) {
+        // Touchscreen
+        context.startServiceAsUser(Intent(context, TouchOrientationService::class.java), UserHandle.CURRENT)
+
         // Override HDR types to enable Dolby Vision
         val displayManager = context.getSystemService(DisplayManager::class.java)
         displayManager?.overrideHdrTypes(Display.DEFAULT_DISPLAY, intArrayOf(
