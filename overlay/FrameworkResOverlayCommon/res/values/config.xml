@@ -314,4 +314,7 @@
 
      <!-- PowerOffAlarmService -->
     <bool name="config_powerOffAlarmEnabled">true</bool>
+
+    <!-- Whether to force enable multi resolution configuration for camera -->
+    <bool name="config_forceMultiResolution">true</bool>
 </resources>
