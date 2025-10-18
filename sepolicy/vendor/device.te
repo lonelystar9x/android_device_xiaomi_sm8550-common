@@ -1,8 +1,13 @@
-type vendor_displayfeature_device, dev_type;
-type vendor_fingerprint_device, dev_type;
-type stmvl53l5_device, dev_type;
+# Camera
 type camlog_device, dev_type;
 type migt_dev, dev_type, mlstrustedobject;
+type stmvl53l5_device, dev_type;
+
+# Display
+type vendor_displayfeature_device, dev_type;
+
+# Fingerprint
+type vendor_fingerprint_device, dev_type;
 
 # Ril
 type vendor_radio_smd_device, dev_type;

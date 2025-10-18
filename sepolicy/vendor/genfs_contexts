@@ -4,11 +4,11 @@ genfscon sysfs "/csiphy_umd_paras/csiphy_umd_paras" u:object_r:sysfs_csiphy_umd_
 # Fingerprint
 genfscon sysfs "/devices/platform/soc/soc:fingerprint_goodix/wakeup" u:object_r:sysfs_wakeup:s0
 
-# Perf
-genfscon proc "/perflock_records" u:object_r:vendor_proc_perflock_records:s0
-
 # Panel Orientation
 genfscon sysfs /devices/virtual/touch/touch_dev/panel_orientation u:object_r:vendor_sysfs_sensors:s0
+
+# Perf
+genfscon proc "/perflock_records" u:object_r:vendor_proc_perflock_records:s0
 
 # Wakeup
 genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/wakeup" u:object_r:sysfs_wakeup:s0
