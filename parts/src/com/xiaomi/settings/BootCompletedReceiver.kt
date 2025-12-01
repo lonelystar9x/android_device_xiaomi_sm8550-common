@@ -50,16 +50,8 @@ class BootCompletedReceiver : BroadcastReceiver() {
     } catch (e: Exception) {
         Log.e(TAG, "Failed to start AutoHBM components", e)
     }
-
-    try {
-        Handler(Looper.getMainLooper()).postDelayed({
-            if (DEBUG) Log.d(TAG, "Initializing GestureUtils after delay")
-            com.xiaomi.settings.utils.GestureUtils.init(context)
-        }, 5000L)
-    } catch (e: Exception) {
-        Log.e(TAG, "Failed to initialize GestureUtils", e)
-    }
 }
+
     private fun onBootCompleted(context: Context) {
         // Telephony
         EsimController.getInstance(context).onBootCompleted()
