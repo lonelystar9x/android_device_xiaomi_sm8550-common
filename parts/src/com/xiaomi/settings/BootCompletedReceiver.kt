@@ -19,12 +19,8 @@ import android.view.Display.HdrCapabilities
 
 import androidx.preference.PreferenceManager
 
-import com.xiaomi.settings.autohbm.AutoHbmActivity
-import com.xiaomi.settings.autohbm.AutoHbmFragment
-import com.xiaomi.settings.autohbm.AutoHbmTileService
 import com.xiaomi.settings.telephony.EsimController
 import com.xiaomi.settings.touch.TouchOrientationService
-import com.xiaomi.settings.utils.ComponentUtils
 
 class BootCompletedReceiver : BroadcastReceiver() {
 
@@ -39,18 +35,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
             Intent.ACTION_BOOT_COMPLETED -> onBootCompleted(context)
             Intent.ACTION_LOCKED_BOOT_COMPLETED -> onLockedBootCompleted(context)
         }
-
-    try {
-        Handler(Looper.getMainLooper()).postDelayed({
-        if (DEBUG) Log.d(TAG, "Starting Auto HBM service components")
-        AutoHbmFragment.toggleAutoHbmService(context)
-        ComponentUtils.toggleComponent(context, AutoHbmActivity::class.java, true)
-        ComponentUtils.toggleComponent(context, AutoHbmTileService::class.java, true)
-        }, 5000L)
-    } catch (e: Exception) {
-        Log.e(TAG, "Failed to start AutoHBM components", e)
     }
-}
 
     private fun onBootCompleted(context: Context) {
         // Telephony
