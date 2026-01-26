@@ -231,6 +231,7 @@ debug.hwui.target_cpu_time_percent=30
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+ro.surface_flinger.game_default_frame_rate_override=120
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_color_management=true
