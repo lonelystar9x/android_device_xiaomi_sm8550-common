@@ -95,6 +95,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libshim_dolby.so'),
     (
+        'vendor/bin/hw/android.hardware.contexthub-service.qmi',
         'vendor/lib64/libstfactory-vendor.so',
         'odm/lib64/nfc_nci.nqx.default.hw.so'
     ): blob_fixup()
