@@ -402,7 +402,6 @@ $(call inherit-product, vendor/xiaomi/sm8550-common/sm8550-common-vendor.mk)
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
-    vndservice \
     vndservicemanager
 
 # Vibrator
